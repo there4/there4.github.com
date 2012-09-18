@@ -2,7 +2,7 @@
 layout: post
 title: "iOS HTML Application Configuration"
 description: ""
-category: 
+category: ux
 tags: [ux, ios]
 published: true
 ---
