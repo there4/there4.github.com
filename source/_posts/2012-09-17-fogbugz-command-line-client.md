@@ -3,9 +3,8 @@ layout: post
 title: "FogBugz Command Line Client"
 description: ""
 category: 
-tags: []
+tags: [fogbugz, php, cli]
 ---
-# FogBugz Command Line Client
 
 [FogBugz Command Line Client][fbcli].
 

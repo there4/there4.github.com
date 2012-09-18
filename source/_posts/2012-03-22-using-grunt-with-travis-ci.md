@@ -3,7 +3,7 @@ layout: post
 title: "Using Grunt with Travis CI"
 description: ""
 category: 
-tags: []
+tags: [js, travisci, grunt]
 ---
 I've just finished adding the Grunt javascript build system to the
 [Uni-Form CSS](http://sprawsm.com/uni-form/) project. This finally gives us a

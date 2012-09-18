@@ -3,10 +3,8 @@ layout: post
 title: "QUnit rules for JSHint"
 description: ""
 category: 
-tags: []
+tags: [grunt, js, jslint]
 ---
-
-# QUnit rules for JSHint
 
 While updating the Uni-Form CSS project to use Grunt, I changed some of the
 settings for the linter, and for the first time, added lint rules for the
