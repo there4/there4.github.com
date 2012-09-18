@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Dotfiles for Puppet Installation"
-date: 2012-09-18 13:14
 comments: true
 categories: 
 ---

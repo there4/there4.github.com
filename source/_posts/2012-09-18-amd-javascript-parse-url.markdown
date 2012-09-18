@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "AMD Javascript Parse URL"
-date: 2012-09-18 13:05
 comments: true
 categories: [backbone, js]
 ---
