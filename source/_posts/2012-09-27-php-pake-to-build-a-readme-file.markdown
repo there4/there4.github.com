@@ -15,4 +15,4 @@ the README. It trims out everything in from the Help heading to the following
 heading, and places the output of the command in it's place. It's hackish, but
 it keeps the readme up to date.
 
-{% gist 1546ec14e487cd8571c9 readme_pakefile.php %}
+{% gist 3796563 readme_pakefile.php %}
