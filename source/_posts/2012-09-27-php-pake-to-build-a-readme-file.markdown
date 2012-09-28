@@ -11,7 +11,7 @@ and wanted a nice way to build the [README.md](https://github.com/there4/fogbugz
 file without having to use templates for the file content. 
 
 This is a small [Pake](https://github.com/indeyets/pake/wiki) command to build
-the README. It trims out everything in from the Help heading to the following
+the README. It trims out everything from the Help heading to the following
 heading, and places the output of the command in it's place. It's hackish, but
 it keeps the readme up to date.
 
