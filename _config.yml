@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://there4.github.com
+url: http://there4development.com/
 title: There4 Development
 subtitle: Simple, Lovable Applications
 author: Craig Davis
 simple_search: http://google.com/search
-description: There4 Application Develop build durable applications.
+description: There4 Development builds durable applications.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
