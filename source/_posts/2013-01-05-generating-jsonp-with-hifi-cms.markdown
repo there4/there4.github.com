@@ -23,11 +23,10 @@ content based on url.
 * `http://hifisite.example.com/help/topic/how-to-skate.jsop` will open the
   how to skate article and render it with the __jsonp__ template.
 
-__HiFi Developer Editor:__
+__HiFi Developer Editor:__  
 {% img /assets/images/posts/hifi-jsonp.png [184] [196] [HiFi Templates with JSONP output] %}
 
-Here's the content of the index.jsonp template:
-
+Here's the content of the index.jsonp template:  
 {% gist 4462076 index.jsonp %}
 
 I've used this with [BackboneJS][bb] to fetch and inline help text from a
