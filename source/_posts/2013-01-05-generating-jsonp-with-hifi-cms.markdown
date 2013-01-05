@@ -12,10 +12,10 @@ HiFi. HiFi has proven to be remarkably flexible with it's [Twig][twig] driven
 layout system. 
 
 One benefit of HiFi is that it has url driven page templates that use a smart
-mime-type system to deliver the correct headers. This means that if you create
-a template with a `.js`, `.json` or `.jsonp` extension, the site will deliver
-it with the correct headers. This then means that you can deliver two different
-versions of content based on url. 
+mime-type system to deliver the correct headers. If you create a template with
+a `.js`, `.json`, or `.jsonp` extension, the site will deliver it with the
+correct headers. This then means that you can deliver two different versions of
+content based on url. 
 
 * `http://hifisite.example.com/help/topic/how-to-skate.html` will open the
   how to skate article and render it with the __html__ template.
@@ -23,6 +23,7 @@ versions of content based on url.
 * `http://hifisite.example.com/help/topic/how-to-skate.jsop` will open the
   how to skate article and render it with the __jsonp__ template.
 
+__HiFi Developer Editor:__
 {% img /assets/images/posts/hifi-jsonp.png [184] [196] [HiFi Templates with JSONP output] %}
 
 Here's the content of the index.jsonp template:

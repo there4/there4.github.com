@@ -10,3 +10,8 @@ h1 a {
 .gist pre {
   color: #222;
 }
+
+.gist {
+  text-size: 85% !important;
+}
+
