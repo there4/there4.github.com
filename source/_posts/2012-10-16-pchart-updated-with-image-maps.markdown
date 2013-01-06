@@ -10,3 +10,9 @@ alias: /projects/pchart_map/
 
 Please see the project page at GitHub
 for [pChart Image Map](https://github.com/there4/pchart-map).
+
+
+<a href="https://github.com/there4/pchart-map" id="github">
+  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+</a>
+

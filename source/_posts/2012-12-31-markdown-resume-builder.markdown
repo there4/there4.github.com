@@ -37,6 +37,9 @@ The app will run best on OSX, as the project leverages
 You can view the project on it's
 [Markdown Resume Project Page][project].
 
+<a href="https://github.com/there4/markdown-resume" id="github">
+  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+</a>
 
 
 [project]: http://there4development.com/markdown-resume

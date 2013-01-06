@@ -18,5 +18,10 @@ This will power widgets that can deliver:
 * Stacked bar graph of current critical, high, and normal cases by count.
 
 
+<a href="https://github.com/there4/fogbugz-geckoboard" id="github">
+  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+</a>
+
+
 [fb]: http://www.fogcreek.com/fogbugz/
 [gb]: http://www.geckoboard.com/

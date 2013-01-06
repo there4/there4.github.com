@@ -56,5 +56,11 @@ please feel free to [fork it][fbcli] and send me a pull request.
 Please see the [FogBugz Command Line Client project page][fbcli] for more
 documentation and __installation information__.
 
+
+<a href="https://github.com/there4/fogbugz-php-cli" id="github">
+  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+</a>
+
+
 [fb]: http://www.fogcreek.com/fogbugz/
 [fbcli]: http://there4.github.com/fogbugz-php-cli/

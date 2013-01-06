@@ -9,3 +9,8 @@ alias: [projects/geolocation/]
 ---
 
 Archived and will return.
+
+
+<a href="https://github.com/there4/jquery-geolocation" id="github">
+  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+</a>
