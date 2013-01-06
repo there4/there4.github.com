@@ -2,6 +2,18 @@ body {
   border-top: 5px solid #39C;
   margin: 0;
 }
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
 h1 a {
   color: #222;
   font-weight: bold;
@@ -22,3 +34,14 @@ ul.networks {
 ul.networks li {
   display: inline-block;
 }
+
+#github img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
+.alpha { clear: both; }
+.alpha, .bravo, .charlie, .delta { width: 104px; height: 100px; float: left; border: 1px solid black; margin: 5px; padding: 5px; background: #ffffff; }
+
