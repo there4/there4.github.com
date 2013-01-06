@@ -4,7 +4,7 @@ title: "iOS HTML Application Configuration"
 description: ""
 category: ux
 tags: [ux, ios]
-published: true
+comments: false
 ---
 
 The following settings will make a website added to the iOS homepage look and

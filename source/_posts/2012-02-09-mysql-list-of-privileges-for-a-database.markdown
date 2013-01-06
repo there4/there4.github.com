@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "MySQL list of privileges for a database"
-comments: true
-categories: [mysql]
+category: mysql
+comments: false
 ---
 
 If you've ever needed to audit a MySQL database for privileges, you know that

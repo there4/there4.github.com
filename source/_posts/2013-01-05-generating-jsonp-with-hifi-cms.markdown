@@ -3,7 +3,8 @@ layout: post
 title: "Generating JSONP with HiFi CMS"
 date: 2013-01-05 09:13
 comments: true
-categories: ["javascript", "backbonejs", "hifi-cms"]
+category: javascript
+tags: ["javascript", "backbonejs", "hifi-cms"]
 ---
 
 I've been using [HiFi CMS][hifi] in a variety of projects lately. I'm weary of

@@ -3,7 +3,8 @@ layout: post
 title: "Markdown Resume Builder"
 date: 2012-12-31 16:39
 comments: true
-categories: [pdf,html,cli]
+category: php
+tags: [php,pdf,html,cli]
 ---
 
 [Markdown Resume Generator][project] is a project that I developed in [PHP][php]

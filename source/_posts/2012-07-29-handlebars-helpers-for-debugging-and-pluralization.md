@@ -2,7 +2,7 @@
 layout: post
 title: "Handlebars Helpers for Debugging and Pluralization"
 description: ""
-category: 
+category: js
 tags: [js, handlebars]
 published: true
 ---

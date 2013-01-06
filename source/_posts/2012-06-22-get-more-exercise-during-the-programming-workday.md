@@ -2,8 +2,9 @@
 layout: post
 title: "Get more exercise during the programming workday"
 description: ""
-category: 
+category: health
 tags: [hg, habits]
+comments: false
 ---
 
 After years of sitting and programming, I've started using a stand-up desk.

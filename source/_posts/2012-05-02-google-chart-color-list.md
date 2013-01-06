@@ -2,8 +2,9 @@
 layout: post
 title: "Google Chart Color List"
 description: ""
-category: 
+category: ux
 tags: [css, ux]
+comments: false
 ---
 
 This is the list of the first 20 colors from the [Google Chart][glc] Color list.

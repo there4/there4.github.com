@@ -2,7 +2,8 @@
 layout: post
 title: "Dotfiles for Puppet Installation"
 comments: true
-categories: 
+category: development
+tags: [vagrant, puppet]
 ---
 
 I take my dotfiles with me everywhere I go. With this file in my [Vagrant][vagrant]

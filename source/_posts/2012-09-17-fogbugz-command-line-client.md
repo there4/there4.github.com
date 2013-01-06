@@ -2,7 +2,7 @@
 layout: post
 title: "FogBugz Command Line Client"
 description: ""
-category: 
+category: fogbugz
 tags: [fogbugz, php, cli]
 ---
 

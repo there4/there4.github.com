@@ -2,8 +2,9 @@
 layout: post
 title: "QUnit rules for JSHint"
 description: ""
-category: 
+category: js
 tags: [grunt, js, jslint]
+comments: false
 ---
 
 While updating the [Uni-Form CSS][uniform] project to use [Grunt][grunt],
