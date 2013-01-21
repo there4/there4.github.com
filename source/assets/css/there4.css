@@ -45,3 +45,24 @@ ul.networks li {
 .alpha { clear: both; }
 .alpha, .bravo, .charlie, .delta { width: 104px; height: 100px; float: left; border: 1px solid black; margin: 5px; padding: 5px; background: #ffffff; }
 
+.sampleColor span {
+  display: inline-block;
+  height: 15px; width: 18px;
+  margin: 0 .5em 0 0;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  background: url(/assets/css/img/colorSample.png) bottom left repeat-x;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.sampleColor {
+  margin: 1em 0 0;
+  list-style: none;
+}
+
+.sampleColor li {
+  display: inline-block;
+  width: 105px;
+}
+
