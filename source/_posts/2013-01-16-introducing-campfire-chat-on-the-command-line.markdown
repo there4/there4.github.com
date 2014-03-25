@@ -3,7 +3,7 @@ layout: post
 title: "Introducing TermCamp, a Campfire command line client"
 date: 2013-01-16 20:47
 comments: true
-categories: ["cli", "node"]
+categories: [cli,node]
 ---
 
 [TermCamp][tc] is a new command line client for [37 Signals][37] [Campfire Chat][fire].

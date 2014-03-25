@@ -3,7 +3,6 @@ layout: post
 title: "Markdown Resume Builder"
 date: 2012-12-31 16:39
 comments: false
-category: php
 tags: [php,pdf,html,cli]
 ---
 

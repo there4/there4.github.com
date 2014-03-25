@@ -2,7 +2,6 @@
 layout: post
 title: "FogBugz GeckoBoard Widgets"
 description: ""
-category: fogbugz
 tags: [fogbugz, geckoboard]
 ---
 

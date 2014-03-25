@@ -3,7 +3,6 @@ layout: post
 title: "Partial API Mocking in Backbone JavaScript"
 date: 2013-03-29 07:34
 comments: true
-category: backbone
 tags: [backbone, js, ajax]
 ---
 

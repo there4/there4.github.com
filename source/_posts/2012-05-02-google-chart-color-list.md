@@ -2,7 +2,6 @@
 layout: post
 title: "Google Chart Color List"
 description: ""
-category: ux
 tags: [css, ux]
 comments: false
 ---

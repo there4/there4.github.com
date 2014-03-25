@@ -3,7 +3,6 @@ layout: post
 title: "pChart updated with image maps"
 date: 2012-10-16 09:20
 comments: false
-category: php
 tags: [php, jQuery]
 alias: /projects/pchart_map/
 ---

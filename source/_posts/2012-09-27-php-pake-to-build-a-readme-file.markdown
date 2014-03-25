@@ -3,7 +3,6 @@ layout: post
 title: "PHP Pake to build a README file"
 date: 2012-09-27 15:51
 comments: true
-category: php
 tags: [php, pake] 
 ---
 

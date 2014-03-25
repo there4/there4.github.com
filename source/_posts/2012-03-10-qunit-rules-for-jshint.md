@@ -2,7 +2,6 @@
 layout: post
 title: "QUnit rules for JSHint"
 description: ""
-category: js
 tags: [grunt, js, jslint]
 comments: false
 ---

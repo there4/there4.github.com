@@ -3,7 +3,7 @@ layout: post
 title: "Unit Testing Slim PHP Framework applications with PHPUnit"
 date: 2013-10-13 11:45
 comments: true
-categories: [php, slim, phpunit]
+tags: [php, slim, phpunit]
 ---
 
 [Slim][slim] is a great PHP framework with a small footprint and everything you need to build fast applications. I've found it particularly well suited to delivering data to [BackboneJS][bb] applications.

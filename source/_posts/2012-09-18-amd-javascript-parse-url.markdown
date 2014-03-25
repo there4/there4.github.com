@@ -2,7 +2,6 @@
 layout: post
 title: "AMD Javascript Parse URL"
 comments: true
-category: backbone
 tags: [backbone, js]
 ---
 

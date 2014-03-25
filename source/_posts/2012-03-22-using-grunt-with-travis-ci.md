@@ -2,9 +2,9 @@
 layout: post
 title: "Using Grunt with Travis CI"
 description: ""
-category: js
 tags: [js, travisci, grunt]
 comments: false
+published: false
 ---
 
 I've just finished adding the Grunt javascript build system to the

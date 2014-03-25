@@ -2,7 +2,6 @@
 layout: post
 title: "Dotfiles for Puppet Installation"
 comments: true
-category: development
 tags: [vagrant, puppet]
 ---
 

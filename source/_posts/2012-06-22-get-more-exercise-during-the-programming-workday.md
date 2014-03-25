@@ -2,7 +2,6 @@
 layout: post
 title: "Get more exercise during the programming workday"
 description: ""
-category: health
 tags: [hg, habits]
 comments: false
 ---

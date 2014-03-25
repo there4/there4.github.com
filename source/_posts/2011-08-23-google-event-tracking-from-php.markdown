@@ -3,7 +3,6 @@ layout: post
 title: "Google Event Tracking from PHP"
 date: 2011-08-23 07:43
 comments: false
-category: php
 tags: [php]
 alias: /projects/analytics/
 ---
