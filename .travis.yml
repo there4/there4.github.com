@@ -15,4 +15,4 @@ after_script:
 env:
   global:
   - GH_REPO="there4/there4.github.com"
-    secure: Vn4zW0cTipyjF7NfayvLwPdqOJFxbQYtuX0+pSS8jP2pTjeKh185b89JKQ4zdIJZaFpOwhKsPumo7ixF3MXx1HibW04LGblTjuBBZNf2/hObXAtJhcGjatfILoL8vTW8z20mByg3Nv3WSdZRpwG//o1hDhEM5ZpCj820CsAkDds=
+  - secure: Vn4zW0cTipyjF7NfayvLwPdqOJFxbQYtuX0+pSS8jP2pTjeKh185b89JKQ4zdIJZaFpOwhKsPumo7ixF3MXx1HibW04LGblTjuBBZNf2/hObXAtJhcGjatfILoL8vTW8z20mByg3Nv3WSdZRpwG//o1hDhEM5ZpCj820CsAkDds=
