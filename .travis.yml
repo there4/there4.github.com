@@ -5,15 +5,17 @@ branches:
 language: ruby
 rvm:
 - 1.9.3
-before_script:
-- export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
+before_install:
 - git config --global user.name "there4(via Travis CI)"
 - git config --global user.email "craig@there4development.com"
-- bundle exec rake setup_github_pages[$REPO_URL]
+before_script:
+- export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
+- bundle install
+- rake setup_github_pages[$REPO_URL]
 script:
-- bundle exec rake generate
+- rake generate
 after_script:
-- bundle exec rake deploy
+- rake deploy
 env:
   global:
   - GH_REPO="there4/there4.github.com"
