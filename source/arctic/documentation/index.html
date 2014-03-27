@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Arctic - Documentation</title>
+<meta name="description" content="Arctic - HTML5 Template">
+<meta name="author" content="joshuapotter.me">
+<meta name="author" content="lucaskriebel.com">
+
+<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Libre+Baskerville:400italic"  type="text/css">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section id="header">
+
+	<div id="header_wrap">
+    
+    	<div id="header_logo"><img src="images/logo.jpg" width="84" height="25" alt="Logo" /></div>
+        <div id="header_text">Documentation</div>
+        
+    </div>
+    
+</section>
+
+<section id="subheader">
+
+	<div id="subheader_wrap"></div>
+    
+</section>
+
+<section id="content">
+
+	<div class="box_alt">
+    	<div class="header"><span class="documentation_header">"Arctic" Documentation by Joshua Potter & Lucas Kriebel - v1.0</span></div>
+    </div>
+    
+    <div class="box">
+        <div class="header"><span class="documentation_header_alt">Arctic - Responsive, Personal Blog Theme</span></div>
+    </div>
+    
+    <div class="box_noPad">
+    
+      <div class="author_left">
+            <p class="documentation_header">Authors</p>
+            <p>&nbsp;</p>
+            <p class="author_header">Joshua Potter</p>
+        <p>Web Coder</p>
+            <p><a href="http://joshuapotter.me">joshuapotter.me</a></p>
+            <p>&nbsp;</p>
+            <p><span class="author_header">Lucas Kriebel</span></p>
+        <p>Web Designer</p>
+          <p><a href="http://lucaskriebel.com">lucaskriebel.com</a></p>
+            
+        </div>
+        <div class="author_right">
+        
+            <p class="documentation_header">Description</p>
+            <p>&nbsp;</p>
+            <p><span class="author_header">Created</span>: 12/2013</p>
+            <p><span class="author_header">Published:</span> 1/2014</p>
+            <p>&nbsp;</p>
+            <p>If you have questions that are not covered in this documentation page, please use the comment section for the &quot;Arctic - Personal Blog Theme&quot; product page.</p>
+            <p>&nbsp;</p>
+            <p>Thank you for you purchasing our theme, your support is greatly appreciated.</p>
+            
+        </div>
+    
+    </div>
+    
+    <div class="box_alt">
+    
+      <p class="documentation_header">Table of Contents</p>
+      <p>&nbsp; </p>
+      <ol>
+        <li><a href="#html">HTML Files and Structure</a>        
+          <ul>
+            <li><a href="#head">#header</a></li>
+            <li><a href="#subhead">#subheader</a></li>
+            <li><a href="#cont">#content</a></li>
+            <li><a href="#post">.post</a>
+              <ul>
+                <li><a href="#photo">Standard Post with Image Feature</a></li>
+                <li><a href="#photoset">Standard Post with Photoset</a></li>
+                <li><a href="#video">Standard Post with Video</a></li>
+                <li><a href="#standard">Standard Post</a></li>
+              </ul>
+            </li>
+            <li><a href="#comments">#comments</a> (post_*.html only)</li>
+            <li><a href="#related_posts">#related_posts</a> (post_*.html only)</li>
+            <li><a href="#footer">#page_footer</a></li>
+            <li><a href="#footer_banner">#footer_banner</a></li>
+          </ul>
+        </li>
+        <li><a href="#css">CSS Files and Structure</a></li>
+          <ul>
+              <li><a href="#icon">#icon</a></li>
+              <li><a href="#post_*">#post_*.html background</a></li>
+              <li><a href="#retina">Retina Display</a></li>
+          </ul>
+        <li><a href="#js">Javascript</a></li>
+        <li><a href="#credits">Sources and Credits</a></li>
+    </ol>
+    
+    </div>
+    
+    <!-- HTML FILES AND STRUCTURE -->  
+    
+    <div class="box_alt" id="html">
+    
+        <p class="documentation_header">A. HTML Files and Structure</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+        <p>&nbsp;</p>
+        <p>This theme is a single column design with three main sections: <span class="highlight">header</span>, <span class="highlight">subheader</span>, and <span class="highlight">content</span>. All information within each section is nested within stylized div with an appropriate id or class. Additionally, HTML5 tags including header, nav, article, and footer are also included, all of which will be covered later. There are four pages:</p>
+      <p>&nbsp;</p>
+   	  <p>
+        	<ul>
+        		<li>index.html</li>
+                <li>archive.html</li>
+                <li>contact.html</li>
+                <li>post.html</li>
+            </ul>
+        </p>
+        	<p>&nbsp;</p>
+        	<p>This documentation covers the index.html as an example, however, all other pages contain the same styles. The methods covered can be applied throughout the theme's documents.</p>
+        
+        <div class="box">
+       	  <p><img src="images/html_1.jpg" width="715" height="276" alt="" /></p>
+            <p class="caption">Fig. 01 - Basic markup (remember: this is not what the actual document looks like, it is a simplifed version to accomodate this guide)</p>
+            <p>&nbsp;</p>
+            <p>The <span class="highlight">header</span> tags denote a header section of the page, generally including navigation and important information/links to other sections of the site. The <span class="highlight">section</span> tag denotes an important section of the site that does not fit the afformentioned tag's description and usage. Now lets get into the details of each specific id style.        </p>
+        </div>    
+        
+        <div class="box">
+            <p class="subheader" id="head">#header</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p>The header tag holds the logo, main navigation, and search bar.</p>
+            <p>&nbsp;</p>
+            <p><img src="images/html_2.jpg" width="922" height="901" alt="Figure 2" /></p>
+            <p class="caption">Fig. 02 - Header markup</p>
+            <p>&nbsp;</p>
+            <p>In order to change the logo of your website, change the link to the image respective to your root folder. Ours is placed in the <span class="highlight">images</span> folder and it's called <span class="highlight">logo.jpg</span>. It is recommended you place your images in the same folder. If your logo was named <span class="highlight">oranges.jpg</span> and you placed it into the <span class="highlight">images</span> folder, the link would be <span class="highlight">images/oranges.jpg</span>. Additionally, when the logo is clicked, it will redirect the user to <span class="highlight">index.html</span> and can be replaced with whatever page you desire by changing <span class="highlight">href=&quot;link-to-page-here.html&quot;</span> with respect to the root folder. </p>
+            <p>&nbsp;</p>
+            <p>Next, is <span class="highlight">navigation</span>. Within the <span class="highlight">navigation</span> id, we have the navigation and search bar within their respective div tags. Furthermore, there are additional links that will only appear when the user views the responsive website, marked with the <span class="highlight">&lt;! -- Responsive Layout Only --&gt;</span> comment. To edit the navigation bar, change the link (similar to changing the link for the logo) to the page, the title name, and the displayed name of the link. That's it for the <span class="highlight">#header</span> portion of the markup.        </p>
+        </div>
+        
+        <div class="box">
+            <p class="subheader" id="subhead">#subheader</p>
+       	  <div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p class="subheader"><img src="images/html_3.jpg" width="353" height="188" alt="Figure 3" />        </p>
+            <p class="caption">Fig. 03 - Subheader markup</p>
+            <p class="caption">&nbsp;</p>
+            <p>The <span class="highlight">icon_border</span> provides the border surrounding the icon avatar. Nothing to see here, folks!</p>
+        </div>
+        
+        <div class="box">
+            <p class="subheader" id="cont">#content</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p class="subheader"><img src="images/html_4.jpg" width="716" height="204" alt="Figure 4" /></p>
+            <p class="caption">Fig. 04 - Icon</p>
+            <p>&nbsp;</p>
+            <p>The icon link must be changed in a similar fashion to all links referenced above. The image itself must be changed via CSS. <a href="#css">Skip to the CSS section</a>.</p>
+            <p>&nbsp;</p>
+            <p><img src="images/html_5.jpg" width="1105" height="590" alt="Figure 5" /></p>
+            <p class="caption">Fig. 05 - Categories</p>
+            <p>&nbsp;</p>
+            <p>The <span class="highlight">categories</span> class links can be changed just like the main navigation links in the <span class="highlight">#header</span> section of this documentation. The <span class="highlight">categories_unlisted</span> id will show when the right arrow next to the category buttons is pressed. It will toggle an extra list of categories that are not shown previously due to space requirements. Just edit the <span class="highlight">categories_unlisted</span> list like the one above, changing the links, title, and displaed name.</p>
+            <p>&nbsp;</p>
+            <p>The next section of this documentation will primarily focus on the mark up for the variety of posts. Keep in mind that it is still within the <span class="highlight">#content</span> section tag.        </p>
+        </div>
+        
+        <div class="box">
+            <p class="subheader" id="post">.post</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p>The markup for the posts use the <span class="highlight">article</span> tag and <span class="highlight">post</span> class. The nested divs differ based on each post type, so keep this in mind when editing. Each post contains a header (including a title and date), body (for the post content), and footer (featuring read more buttons, icons for user interaction, and social media). </p>
+            <p>&nbsp;</p>
+            <p>This documentation page will now cover each individual post type, what makes them different, and how they can be edited.</p>
+            <p>&nbsp;</p>
+            
+            <p class="subheader" id="photo"><i class="fa fa-plus-square"></i>Standard Post with Image Feature</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p><img src="images/html_6.jpg" width="1105" height="698" alt="Figure 6" /></p>
+            <p class="caption">Fig. 06 - Standard Post with Image Feature, pt. 1</p>
+            <p>&nbsp;</p>
+            <p>The image is nested in the section tag with <span class="highlight">post_media</span> class. The <span class="highlight">post_type</span> id is <span class="highlight">photo</span>. This changes the icon in the top right of the media on the post. Other options include <span class="highlight">photoset</span> and <span class="highlight">video</span> (both covered later). To change the image, replace the source of the image (in this example: <span class="highlight">src=&quot;images/post_photo.jpg&quot;</span>) with a link to a local file on the server or a image hosted on another website. The image will be resized automatically according to this theme's width restrictions. Also, don't forget to change the <span class="highlight">alt</span> tag, text that will replace the image if users have images turned off or cannot see and utilize applications that read what is on their screen to them!</p>
+            <p>&nbsp;</p>
+            <p>The <span class="highlight">post_title</span> div holds the title of the post with a link around it. Point the link to the page of the post. The <span class="highlight">post_date</span> div holds the date of the post. The <span class="highlight">post_body</span> class holds the content of the post. These three divs are standard on all posts types. You can style <span class="highlight">post_body</span> text differently with <span class="highlight">.dark_font</span>, <span class="highlight">.quote</span>, and <span class="highlight">.highlight</span> (all of which are demonstrated on <a href="../theme/post.html">post.html</a>). </p>
+            <p>&nbsp;</p>
+            <p class="subheader"><img src="images/html_7.jpg" width="1105" height="511" alt="Figure 7" /></p>
+            <p class="caption">Fig. 07 - Standard Post with Image Feature, pt. 2</p>
+            <p class="caption">&nbsp;</p>
+            <p>The <span class="highlight">footer</span> tag contains the read more button, social media icons, and social media &quot;share&quot;/&quot;tweet&quot; buttons. </p>
+            <p>&nbsp;</p>
+            
+<p class="subheader" id="photoset"><i class="fa fa-plus-square"></i>Standard Post with Gallery Feature </p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p><img src="images/html_8.jpg" width="840" height="324" alt="Figure 8" /></p>
+            <p class="caption">Fig. 08 - Standard Post with Gallery Feature</p>
+            <p class="caption">&nbsp;</p>
+            <p>The standard post with gallery feature is no different to any other media post except for <span class="highlight">post_type</span> (with an id of <span class="highlight">photoset</span>) and the <span class="highlight">flexslider</span> div. To change the images in the image slider, change the links to the images with respect to the root folder. Don't forget to change the <span class="highlight">alt</span> tags!</p>
+            <p>&nbsp;</p>
+            
+            <p class="subheader" id="video"><i class="fa fa-plus-square"></i>Standard Post with Video Feature</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p class="subheader"><img src="images/html_9.jpg" width="1007" height="222" alt="Figure 9" /></p>
+            <p class="caption">Fig. 09 - Standard Post with Video Feature</p>
+            <p class="caption">&nbsp;</p>
+            <p>The standard post with video feature is similar to the other media posts above. Simply change the <span class="highlight">post_type</span> id to <span class="highlight">video</span> and replace the iframe with another embed link or local video player with the dimensions <span class="highlight">916x515</span> (px).</p>
+            <p>&nbsp;</p>
+            
+            <p class="subheader" id="standard"><i class="fa fa-plus-square"></i>Standard Post</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+            <p>&nbsp;</p>
+            <p><img src="images/html_10.jpg" width="582" height="196" alt="Figure 10" /></p>
+            <p class="caption">Fig. 10 - Standard Post</p>
+            <p>&nbsp;</p>
+            <p>The standard post template features no <span class="highlight">post_media</span> class. The only thing that requires editing is <span class="highlight">post_title</span>, <span class="highlight">post_date</span>, and <span class="highlight">post_body</span>, similar to all other posts.</p>
+            <p>&nbsp;</p>
+        </div>
+
+        <div class="box_alt">
+            <p class="subheader" id="comments">#comments</p>
+            <p>&nbsp;</p>
+            <p><img src="images/html_12.jpg" width="618" height="115" alt="Figure 12" /></p>
+            <p class="caption">Fig. 12 - Footer Banner</p>
+            <p>&nbsp;</p>
+            <p>The <span class="highlight">#footer_banner</span> id holds copyright information.</p>
+        </div>
+
+        <div class="box_alt">
+            <p class="subheader" id="related_posts">#related_posts</p>
+            <p>&nbsp;</p>
+            <p><img src="images/html_12.jpg" width="618" height="115" alt="Figure 12" /></p>
+            <p class="caption">Fig. 12 - Footer Banner</p>
+            <p>&nbsp;</p>
+            <p>The <span class="highlight">#footer_banner</span> id holds copyright information.</p>
+        </div>
+        
+        <div class="box_alt">
+        	<p class="subheader" id="footer">#page_footer</p>
+       	    <p>&nbsp;</p>
+            <p><img src="images/html_11.jpg" width="1126" height="678" alt="Figure 11" /></p>
+            <p class="caption">Fig. 11 - Footer Pagination and Social Media</p>
+            <p>&nbsp;</p>
+            <p>The <span class="highlight">footer</span> tag with <span class="highlight">page_footer</span> id holds footer navigation and social media. The navigation can be edited just like previous links. The <span class="highlight">social_media</span> id contains an ordered list that includes a link and an icon. The link can be changed as explained above. The icon is parsed based on the code within the quotations for the class value in accordance to <a href="http://fontawesome.io/">Font Awesome</a>. In order to change the icon, replace <span class="highlight">fa-icon-name</span> (ex. fa-facebook) with whatever other social media icon you desire provided it is on <a href="http://fontawesome.io/icons/">this list</a>. Make sure to leave the preceding <span class="highlight">fa</span> in place, as it lets the browser know that it's looking for an icon from the Font Awesome stylesheet. <span class="highlight">fa-lg</span> is for sizing. To make it smaller, remove it entirely, to make it larger, replace with <span class="highlight">fa-2x</span>, <span class="highlight">fa-3x</span>, <span class="highlight">fa-4x</span>, or <span class="highlight">fa-5x.</span></p>
+            <p>&nbsp;</p>
+            <p>Keep in mind that the <span class="highlight">footer</span> is inside the <span class="highlight">#content</span> section.</p>
+        </div>
+
+        <div class="box_alt">
+            <p class="subheader" id="footer_banner">#footer_banner</p>
+            <p>&nbsp;</p>
+            <p><img src="images/html_12.jpg" width="618" height="115" alt="Figure 12" /></p>
+            <p class="caption">Fig. 12 - Footer Banner</p>
+            <p>&nbsp;</p>
+            <p>The <span class="highlight">#footer_banner</span> id holds copyright information.</p>
+        </div>
+
+        <p>&nbsp;</p>
+        <p>That covers the the HTML Files & Structure section. All other pages are constructed using the same styles as above.</p>
+    </div>
+    
+    <!-- CSS FILES AND STRUCTURE -->  
+    
+    <div class="box_alt" id="css">
+    
+    	<p class="documentation_header">B. CSS Files and Structure</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+    	<p>&nbsp;</p>
+    	<p>All styles discussed above are defined in the main_stylesheet.css located within the css folder. This next section of the documentation will cover the styles relevant to the above html, what can be changed, and how it can be changed. Please remember that if you still have questions, feel free to contact us.</p>
+    	<p>&nbsp;</p>
+    	<p>There are two stylesheets included with this theme:</p>
+    	<p>
+        	<ul>
+            	<li>css/main_stylesheet.css</li>
+                <li>css/responsive_stylesheet.css</li>
+                <li>css/flexslider.css</li>
+            </ul>
+        </p>
+    	<p>&nbsp;</p>
+        
+   	  <p>The <span class="highlight">main_stylesheet.css</span> and <span class="highlight">responsive_stylesheet.css</span> contain all styles regarding the design of the theme. <span class="highlight">flexslider.css</span> contains the style for the image slider. In order to edit any of the associated styles, locate the style (id is represented with a #, class represented by a .) in the stylesheet and edit any of it's values. The <span class="highlight">main_stylesheet.css</span> and <span class="highlight">responsive_stylesheet.css</span> are labeled by the section of the document it is located in comments:</p>
+        <p>&nbsp;</p>
+   	  <p class="code">/* 0.0 Document Restrictions */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 1.0 Header */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 2.0 Subheader */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 3.0 Icon/Avatar */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 4.0 Categories */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 5.0 Posts */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 6.0 Permalink Styles */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 7.0 Comments */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 8.0 Related Posts */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 9.0 Pagination */</p>
+        <p class="code">Code...</p>
+   	  <p class="code">/* 10.0 Styling */</p>
+        <p class="code">Code...</p>
+        <p>&nbsp;</p>
+   	  <p class="subheader">Important Changes</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div> 
+        <p>&nbsp;</p>
+   	  <p>Two images that must be changed via CSS that directly impacts the design are the <span class="highlight">icon</span> and the <span class="highlight">post_gallery.html</span>, <span class="highlight">post_image.html</span>, <span class="highlight">post_standard.html</span>, <span class="highlight">post_video.html</span> backgrounds. </p>
+      	<p>&nbsp;</p>
+        <p class="subheader" id="icon"><i class="fa fa-plus-square"></i>Icon</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+   	  <p>&nbsp;</p>
+      	<p><img src="images/css_1.jpg" width="572" height="186" alt="Figure 1" /></p>
+      	<p class="caption">Fig. 01 - Icon CSS</p>
+        <p>&nbsp;</p>
+      	<p>To change the icon image, replace background url (<span class="highlight">../images/icon.jpg</span>) with the link to the icon you wish to use instead. The link to the icon is in relation to the <span class="highlight">main_stylesheet.css</span>. Do not worry if the image is square, the css will do the rest to make it circular! </p>
+      	<p>&nbsp;</p>
+        <p class="subheader" id="post_*"><i class="fa fa-plus-square"></i>Post.html Background</p>
+        <div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>    
+   	  	<p>&nbsp;</p>
+   	  	<img src="images/css_2.jpg" width="1181" height="105" alt="Figure 2" />
+      	<p class="caption">Fig. 02 - Post.html Background CSS</p>
+        <p>&nbsp;</p>
+	    <p>To change the icon image, replace background url (<span class="highlight">../images/post_photo.jpg</span>) within  inline css with the link to the icon you wish to use instead. The link to the icon is in relation to the <span class="highlight">index.html</span>. As the script blurs the background image of the container, inline CSS is necessary to allow for independent background images on each page, instead of using one background image for all pages similar to <span class="highlight">post_gallery.html</span>, <span class="highlight">post_image.html</span>, <span class="highlight">post_standard.html</span>, <span class="highlight">post_video.html</span> in one stylesheet. Do not worry if the image is not blurred, the Javascript (covered later in this guide) will do the rest to make it blurred! This is only in the <span class="highlight">post_gallery.html</span>, <span class="highlight">post_image.html</span>, <span class="highlight">post_standard.html</span>, <span class="highlight">post_video.html</span> pages.</p>
+        <p>&nbsp;</p>
+        <p class="subheader" id="retina">Retina Display</p>
+        <div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+        <p>&nbsp;</p>
+        <p><img src="images/css_3.png" alt="Figure 3" /></p>
+        <p class="caption">Fig. 03 - Retina Display</p>
+        <p>&nbsp;</p>
+        <p>Retina Display is defined within <span class="highlight">main_stylesheet.css</span> right at the end. The only images that may need changing are the logo. Replace the source of the logo image and replace the dimensions with the dimensions of your own logo.</p>
+    </div>
+    
+    <!-- JAVASCRIPT -->  
+    
+    <div class="box_alt" id="js">
+    
+    	<p class="documentation_header">C. Javascript</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+    	<p class="documentation_header">&nbsp;</p>
+    	<p>&nbsp;</p>
+    	<p>This theme supports four Javascript files:</p>
+    	<p>&nbsp;</p>
+    	<p>
+            <ul>
+                <li>jQuery</li>
+                <li>js/jquery.flexslider-min.js</li>
+                <li>js/blur.min.js</li>
+                <li>js/custom.js</li>
+            </ul>     
+        </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="subheader">jQuery</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>  
+        <p>&nbsp;</p>
+        <p>jQuery is a library that allows the developer to write much less code than Javascript normally permits. The library is hosted remotely and is not  included in the <span class="highlight">js/</span> folder</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="subheader">jquery.flexslider-min.js</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>  
+        <p>&nbsp;</p>
+        <p>This document contains the necessary code for the imageslider (supported by jQuery), titled FlexSlider, to operate. <a href="http://www.woothemes.com/flexslider/">FlexSlider is owned by WooThemes</a> and licensed under the <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.html">GPLv2 license</a>.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="subheader">blur.min.js</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>  
+        <p>&nbsp;</p>
+        <p>This document contains the necessary code for the blurred background show on <a href="../themes/post.html">post.html</a> (supported by jQuery). It does NOT work locally - it must be viewed on a remote server! To edit the background image, please <a href="css">review the CSS portion of this documentation</a>. <a href="http://www.blurjs.com/">Blur.JS is owned by Jacob Kelley</a> and is licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      	<p class="subheader">custom.js</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>  
+      	<p>&nbsp;</p>
+        <p>This document contains the necessary code for the rest of the site (supported by jQuery)! It allows for smooth slide toggle buttons featured on the categories  &quot;more&quot; button, found on index.html, and accordian folders, found on archives.html.</p>
+    </div>
+    
+    <!-- SOURCES AND CREDITS -->  
+    
+    <div class="box_alt" id="credits">
+    
+    	<p class="documentation_header">D. Sources and Credits</p><div class="top"><a href="#">Back to Top</a> <i class="fa fa-level-up"></i></div>
+    	<p>&nbsp;</p>
+    	<p>
+        	<ul>
+            	<li>jQuery - <a href="http://jquery.com/">http://jquery.com/</a></li>
+                <li>FlexSlider - <a href="http://www.woothemes.com/flexslider">http://www.woothemes.com/flexslider</a>/</li>
+                <li>Blur.JS - <a href="http://blurjs.com/">http://blurjs.com/</a></li>
+                <li>Font Awesome - <a href="http://fontawesome.io/">http://fontawesome.io/</a></li>
+                <li>Google Fonts - <a href="http://google.com/webfonts/">http://google.com/webfonts/</a></li>
+            </ul>
+        </p>
+    
+    </div>
+    
+    <div class="box_alt">
+    
+    	<p>Once again, thank you so much for purchasing our theme. If you have any remaining questions, feel free to contact us in the comments section on the product page for "Arctic - Personal Blog Theme".</p>
+    	<p>&nbsp;</p>
+        
+        <p class="documentation_header">Joshua Potter & Lucas Kriebel - Appearly Themes</p>
+    
+  </div>
+
+</section>
+
+</body>
+</html>
