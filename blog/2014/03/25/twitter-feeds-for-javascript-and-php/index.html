@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/there4.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/animated_border.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/print.css" media="print" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+    <title>Twitter Feeds for JavaScript and PHP</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+        <header>
+          <h1><a href="http://there4.github.com">There4 Development</a></h1>
+          <p>Simple, Lovable Applications</p>
+        </header>
+
+        <section id="main_content">
+          <div id="post">
+<h1>Twitter Feeds for JavaScript and PHP</h1>
+<p>I&#8217;ve found that my GitHub activity page has been a great resource for discovering new projects. In particular, finding the right people to follow has been key. As an experiment, I&#8217;ve created two new twitter accounts to expose some of this.</p>
+
+<p>I&#8217;ve created two new accounts and GitHub and two matching ones on Twitter, <a href="https://twitter.com/javascriptstars">one for JavaScript</a> and <a href="https://twitter.com/php_stars">one for PHP</a>, and I&#8217;ve followed creative and interesting developers with both GitHub accounts. When someone that they are following on GitHub stars a project, the Twitter accounts tweet about it.</p>
+
+<h2>Processing With Yahoo Pipes and Ifttt</h2>
+
+<p>These accounts each generate two RSS feeds. I use <a href="http://pipes.yahoo.com/pipes/">Yahoo Pipes</a> to combine and filter these feeds. You can see how this currently works:</p>
+
+<p><img src="/images/pipes-workflow.png" title="Yahoo Pipes" alt="Filtering and Combining" /></p>
+
+<p>The output feed is then given to <a href="https://ifttt.com">Ifttt.com</a> to post to Twitter.</p>
+
+<h2>The Resuling Feed</h2>
+
+<p><a class="twitter-timeline" href="https://twitter.com/javascriptstars" data-widget-id="448600771701907457">Tweets by @javascriptstars</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<p><a class="twitter-timeline" href="https://twitter.com/php_stars" data-widget-id="448600549517058049">Tweets by @php_stars</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+</div>
+
+<hr style="margin-top: 1em;">
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>27 Aug 2014</span> &raquo; <a href="/blog/2014/08/27/whats-your-front-end-workflow/">What's your front-end workflow</a></li>
+    
+      <li><span>26 Aug 2014</span> &raquo; <a href="/blog/2014/08/26/what-do-you-do-when-a-project-gets-stalled/">What do you do when a project gets stalled?</a></li>
+    
+      <li><span>13 Oct 2013</span> &raquo; <a href="/blog/2013/10/13/unit-testing-slim-framework-applications-with-phpunit/">Unit Testing Slim PHP Framework applications with PHPUnit</a></li>
+    
+  </ul>
+</div>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'there4';
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+        </section>
+
+        <footer>
+          Content Copyright <a href="https://github.com/there4">There4 Development</a>.<br>
+        </footer>
+
+    </div>
+    <script src="/assets/javascript/scale.fix.js"></script>
+    <script type="text/javascript">
+      var disqus_shortname = 'there4';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-8504376-1']);
+      _gaq.push(['_setDomainName', 'there4development.com']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

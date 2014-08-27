@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cli | There4 Development]]></title>
+  <link href="http://there4.github.com/blog/categories/cli/atom.xml" rel="self"/>
+  <link href="http://there4.github.com/"/>
+  <updated>2014-08-27T14:06:41+00:00</updated>
+  <id>http://there4.github.com/</id>
+  <author>
+    <name><![CDATA[Craig Davis]]></name>
+    <email><![CDATA[craig@there4development.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing TermCamp, a Campfire command line client]]></title>
+    <link href="http://there4.github.com/blog/2013/01/16/introducing-campfire-chat-on-the-command-line/"/>
+    <updated>2013-01-16T20:47:00+00:00</updated>
+    <id>http://there4.github.com/blog/2013/01/16/introducing-campfire-chat-on-the-command-line</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/bengl/node-termcamp">TermCamp</a> is a new command line client for <a href="http://37signals.com/">37 Signals</a> <a href="http://campfirenow.com/">Campfire Chat</a>.
+It's written for <a href="http://nodejs.org/">node</a>, and looks like this:</p>
+
+<p><img src="/assets/images/posts/termcamp-sample.png" title="[574] [377] [Sample TermCamp]" ></p>
+
+<p>It's got a nice collection of features that make it a remarkably complete client:</p>
+
+<ul>
+<li>Bell alerts for name mentions</li>
+<li>Formatting for all Campfire message types (Even tweets!)</li>
+<li>Name colorization (optional)</li>
+<li>Enter and exit notifications</li>
+</ul>
+
+
+<p>I've used it as my primary client by keeping it in a <a href="http://tmux.sourceforge.net/">tmux</a> pane, and it's
+performed well. Unfortunately, it's missing a few things. The urls for pasted
+images are still missing, and you can't paste text. It's a little better for
+listening to a room than for pasting and long conversations. But, we use
+<a href="http://hubot.github.com/">Hubot</a> and <a href="http://www.fogcreek.com/kiln/">Kiln</a> bots for relaying messages, and this terminal
+client is perfect for that use case.</p>
+
+<p>You can <a href="https://github.com/bengl/node-termcamp">clone or fork the project</a> on GitHub.</p>
+
+<p><a href="https://github.com/bengl/node-termcamp" id="github">
+  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+</a></p>
+]]></content>
+  </entry>
+  
+</feed>

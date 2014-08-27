@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/there4.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/animated_border.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/print.css" media="print" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+    <title>Unit Testing Slim PHP Framework applications with PHPUnit</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+        <header>
+          <h1><a href="http://there4.github.com">There4 Development</a></h1>
+          <p>Simple, Lovable Applications</p>
+        </header>
+
+        <section id="main_content">
+          <div id="post">
+<h1>Unit Testing Slim PHP Framework applications with PHPUnit</h1>
+<p><a href="http://www.slimframework.com/">Slim</a> is a great PHP framework with a small footprint and everything you need to build fast applications. I&#8217;ve found it particularly well suited to delivering data to <a href="http://backbonejs.org">BackboneJS</a> applications.</p>
+
+<p>However, I haven&#8217;t found a great deal of information about integration and unit testing with Slim, and have developed an approach that allows complete end-to-end testing of an application. You can use this testing a REST framework, or a complete website. In particular, I think it&#8217;s a great way to handle regression testing. I&#8217;m presenting a <a href="https://github.com/there4/slim-unit-testing-example">sample application</a> that I hope will help others on their path to using this great framework.</p>
+
+<h2>Example</h2>
+
+<p>Here&#8217;s <a href="https://github.com/there4/slim-unit-testing-example/blob/master/tests/integration/VersionTest.php">a test</a> for a very simple endpoint that returns the version from the application config. We&#8217;re asserting that Slim responded with a <code>200</code> and that the version matches what we expect.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">class VersionTest extends Slim_Framework_TestCase {</span>
+</span><span class='line'><span class="x">    public function testVersion() {</span>
+</span><span class='line'><span class="x">        $this-&gt;get(&#39;/version&#39;);</span>
+</span><span class='line'><span class="x">        $this-&gt;assertEquals(200, $this-&gt;response-&gt;status());</span>
+</span><span class='line'><span class="x">        $this-&gt;assertEquals($this-&gt;app-&gt;config(&#39;version&#39;), $this-&gt;response-&gt;body());</span>
+</span><span class='line'><span class="x">    }</span>
+</span><span class='line'><span class="x">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Concepts</h2>
+
+<p>The core idea of this approach is that we isolate our application routes into their own file. This allows us to include this route file into both a production context via an index.php file, and also include it within a unit testing bootstrap harness in our testing context. The unit testing context with use the internal <code>Slim\Environment::mock()</code> method to setup an environment for our application.</p>
+
+<p>Here&#8217;s what the app looks like:</p>
+
+<ul>
+<li>app/
+
+<ul>
+<li>app.php</li>
+</ul>
+</li>
+<li>public/
+
+<ul>
+<li>index.php</li>
+<li>.htaccess</li>
+</ul>
+</li>
+<li>tests/
+
+<ul>
+<li>bootstrap.php</li>
+<li>integration/
+
+<ul>
+<li>VersionTest.php</li>
+<li>UsersTest.php</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>phpunit.xml</li>
+</ul>
+
+
+<p>The <code>public/index.php</code> file serves as the application entry point. This file initializes a SlimPHP <code>$app</code> with production configuration, includes the routes file from <code>app/app.php</code> and then runs the app with <code>$app-&gt;run();</code>. This allows us to keep our application separate from the index, and gives us an opportunity to include our <code>app/app.php</code> file in a different context.</p>
+
+<p>When phpunit runs, it looks for the phpunit.xml file in our root. This file specifies a testing bootstrap file. PHPUnit includes <code>testing/bootstrap.php</code>. This file creates an <code>$app</code>, just like in <code>index/index.php</code>, but it uses testing configuration. The bootstrap keeps a reference to <code>$app</code> for the testing framework, and then provides several helper methods for <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>HEAD</code>, and <code>DELETE</code>.</p>
+
+<p>With these methods, you can run end to end tests on SlimPHP routes without a webserver. The tests run entirely within a mock environment, and will be fast and efficient.</p>
+
+<h2>The Bootstrap</h2>
+
+<p>You can see the <a href="https://github.com/there4/slim-unit-testing-example/blob/master/tests/bootstrap.php">full bootstrap</a> at gitub. Here&#8217;s some extra comments about what&#8217;s going on:</p>
+
+<p>Before each unit test method is run, we make a fresh environment for Slim</p>
+
+<pre><code>public function setup() {
+</code></pre>
+
+<p>Initialize our app, this should mimic your production setup. During an integration test, the system under test should be as nearly identical to production as possible. Here&#8217;s the creation of our application:</p>
+
+<pre><code>$app = new \Slim\Slim(array(
+  'version' =&gt; '0.0.0',
+  'debug'   =&gt; false,
+  'mode'    =&gt; 'testing'
+));
+</code></pre>
+
+<p>Include our application routes file.</p>
+
+<pre><code>require __DIR__ . '/../app/app.php';
+</code></pre>
+
+<p>This one may not be the exact spirit of PHPUnit, but I find that it&#8217;s a convienent way of accessing our application while it&#8217;s under test. We add a reference to the application onto our phpunit instance.</p>
+
+<pre><code>$this-&gt;app = $app;
+</code></pre>
+
+<p>End our test method setup</p>
+
+<pre><code>}
+</code></pre>
+
+<p>Now, we add a way to PHPUnit to trigger our routes by adding a new function called <code>request()</code>. This is a generic method for all HTTP methods, and we&#8217;ll use to make shorthand methods for <code>get()</code>, <code>post()</code>, etc.</p>
+
+<pre><code>public function request($method, $path, $options = array())
+{
+</code></pre>
+
+<p>Some slim actions are going to print to STDOUT. We&#8217;ll use output buffering to trap this so that we can inspect output and run the application quietly.</p>
+
+<pre><code>ob_start();
+</code></pre>
+
+<p>This is the heart of this approach, creating a mock environment for Slim. This lets us run the unit tests without a webserver, without curl, without anything other than PHPUnit. This sets up the environment as if the application was running under a webserver:</p>
+
+<pre><code>\Slim\Environment::mock(array_merge(array(
+    'REQUEST_METHOD' =&gt; $method,
+    'PATH_INFO'      =&gt; $path,
+    'SERVER_NAME'    =&gt; 'local.dev',
+), $options));
+</code></pre>
+
+<p>These are strictly for shorthand access in test methods. It allows us to do things like <code>$this-&gt;assertEquals(200, $this-&gt;response-&gt;status());</code>.</p>
+
+<pre><code>$this-&gt;request  = $this-&gt;app-&gt;request();
+$this-&gt;response = $this-&gt;app-&gt;response();
+</code></pre>
+
+<p>Execute our slim application within our testing environment. This fires the routes that were setup in the environment mocking.</p>
+
+<pre><code>$this-&gt;app-&gt;run();
+</code></pre>
+
+<p>Return the application output. Also available in <code>response-&gt;body()</code></p>
+
+<pre><code>return ob_get_clean();
+</code></pre>
+
+<p>End the request mocking.</p>
+
+<pre><code>}
+</code></pre>
+
+<p>This <code>request()</code> allows us to write shorthand methods and easily run Slim routes.</p>
+
+<h2>Unit Testing vs. Integration Testing</h2>
+
+<p>Unit tests should test an individual part of code. The system under test should be as small as possible. You would unit test an individual method. Integration testing exercises an entire system. Most of this example is about integration testing. We are running tests that work Slim from initial instantiation to the final delivery of data. With integration tests, we&#8217;re treating the entire application as a unit, setting up a particular initial environment and then executing the <code>run()</code> command and finally inspecting the results to ensure that they match our expectations.</p>
+
+<h2>Mocking with SlimPHP</h2>
+
+<p>See the <a href="https://github.com/there4/slim-unit-testing-example/blob/master/tests/integration/ZenTest.php">ZenTest</a> for an example of mocking with SlimPHP dependency injection. In this test we mock a Curl wrapper class from <a href="https://github.com/shuber/curl">Shuber</a>. This allows us to substitute responses and exercise the parts of our application that we feel need testing. It also allows us to run these unit tests on systems that don&#8217;t have the curl extension installed. We&#8217;re totally isolated from that dependency while this running test.</p>
+
+<p>The <a href="https://github.com/there4/slim-unit-testing-example/blob/master/tests/integration/FileStoreTest.php">FileStoreTest</a> uses a mock for the authentication class. Notice that the file store route doesn&#8217;t use that class directly, but instead it is used by the application authenticator method. We&#8217;re using the app dependency injection container to swap out the real object for a mock version. This approach allows us to control authentication results from within our test harness.</p>
+
+<p>You can read more about dependency injection in the <a href="http://docs.slimframework.com/#Dependency-Injection">SlimDocs on DI</a>, and more about mock objects in the <a href="http://phpunit.de/manual/3.0/en/mock-objects.html">PHPUnit docs</a>.</p>
+
+<p><a href="https://github.com/there4/slim-unit-testing-example" id="github">
+  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+</a></p>
+
+</div>
+
+<hr style="margin-top: 1em;">
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>27 Aug 2014</span> &raquo; <a href="/blog/2014/08/27/whats-your-front-end-workflow/">What's your front-end workflow</a></li>
+    
+      <li><span>26 Aug 2014</span> &raquo; <a href="/blog/2014/08/26/what-do-you-do-when-a-project-gets-stalled/">What do you do when a project gets stalled?</a></li>
+    
+      <li><span>25 Mar 2014</span> &raquo; <a href="/blog/2014/03/25/twitter-feeds-for-javascript-and-php/">Twitter Feeds for JavaScript and PHP</a></li>
+    
+  </ul>
+</div>
+
+
+<hr style="margin-top: 1em;">
+<div id="comments">
+  <h2>Comments</h2>
+  <div id="disqus_thread"></div>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'there4';
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+        </section>
+
+        <footer>
+          Content Copyright <a href="https://github.com/there4">There4 Development</a>.<br>
+        </footer>
+
+    </div>
+    <script src="/assets/javascript/scale.fix.js"></script>
+    <script type="text/javascript">
+      var disqus_shortname = 'there4';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-8504376-1']);
+      _gaq.push(['_setDomainName', 'there4development.com']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/there4.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/animated_border.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/print.css" media="print" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+    <title>What's your front-end workflow</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+        <header>
+          <h1><a href="http://there4.github.com">There4 Development</a></h1>
+          <p>Simple, Lovable Applications</p>
+        </header>
+
+        <section id="main_content">
+          <div id="post">
+<h1>What's your front-end workflow</h1>
+<p>My response from <a href="http://zurb.com/tavern/questions/what-s-your-front-end-workflow">Tavern</a>:</p>
+
+<p>I develop in the <a href="http://www.sublimetext.com/">Sublime text editor</a> and with <a href="http://gruntjs.com/">Grunt</a> and <a href="https://github.com/indeyets/pake">Pake</a>. Grunt is a JS automation tool that has plugins for nearly every task that you might need. It&#8217;s capable of building assets, running a development server, or doing deployments. It really is brilliant. Pake is a php build tool that has robust plugins for ssh and building an asset pipeline.</p>
+
+<p>Source control is an essential part of my workflow. In particular, I use a collection of commit hooks to run automated code analysis when I commit changes. For instance, I run a JavaScript linter that checks for code errors and code style problems. For instance trailing commas in some instances can cause problems for IE. With a commit hook linter, you&#8217;ll never be able to commit code with that particular problem.</p>
+
+<p>During development, I run two processes with Grunt. I run a local development server with <a href="https://github.com/gruntjs/grunt-contrib-connect">Grunt Connect</a>, and a watch command with <a href="https://github.com/gruntjs/grunt-contrib-watch">Grunt Watch</a>. The <code>grunt connect</code> server allows me to skip dealing with setting up a local webserver or dealing with apache. It also allows me to quickly spin up a copy of the project on a different computer. It&#8217;s self contained. With <code>grunt watch</code>, I can configure a set of actions to take place whenever files change. So, if I&#8217;ve chosen to use <a href="http://lesscss.org/">LESS</a> on a project, anytime that I save changes to a <code>.less</code> file, grunt will rebuild my css files for me.</p>
+
+<p>I automate as much as possible. When I do discover a problem, I let it go. When I see that same problem for about the third time, I add automation to prevent it from happening again. This can lead to a bit of accumulation of tools, but with Grunt in particular, it&#8217;s easy to manage and compartmentalize them.</p>
+
+<p>I&#8217;d like to also point out a couple of great testing tools - <a href="http://crossbrowsertesting.com/">Cross Browser Testing</a> and the <a href="https://developer.apple.com/xcode/downloads/">iOS simulator in XCode</a>. Cross Browser makes it easy to quickly take screenshots across a wide variety of browsers and operating systems. If you do discover a problem you can use remote desktop to connect to that machine and use a real browser to continue to troubleshoot. The iOS simulator from XCode allows you to run a local simulator for iPad and iPhone. It can greatly speed up troubleshooting small screen problems with design.</p>
+
+</div>
+
+<hr style="margin-top: 1em;">
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>26 Aug 2014</span> &raquo; <a href="/blog/2014/08/26/what-do-you-do-when-a-project-gets-stalled/">What do you do when a project gets stalled?</a></li>
+    
+      <li><span>25 Mar 2014</span> &raquo; <a href="/blog/2014/03/25/twitter-feeds-for-javascript-and-php/">Twitter Feeds for JavaScript and PHP</a></li>
+    
+      <li><span>13 Oct 2013</span> &raquo; <a href="/blog/2013/10/13/unit-testing-slim-framework-applications-with-phpunit/">Unit Testing Slim PHP Framework applications with PHPUnit</a></li>
+    
+  </ul>
+</div>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'there4';
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+        </section>
+
+        <footer>
+          Content Copyright <a href="https://github.com/there4">There4 Development</a>.<br>
+        </footer>
+
+    </div>
+    <script src="/assets/javascript/scale.fix.js"></script>
+    <script type="text/javascript">
+      var disqus_shortname = 'there4';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-8504376-1']);
+      _gaq.push(['_setDomainName', 'there4development.com']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
